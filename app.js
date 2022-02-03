@@ -21,6 +21,10 @@ app.use('/api/products', productRoutes);
 app.use('/api/orders', ordersRoutes);
 app.use('/api/users', usersRoutes);
 
+app.get('/', (req, res) => {
+	res.send('Welcome to the API');
+});
+
 mongoose
 	.connect(process.env.DB_CONNECTION, {
 		useNewUrlParser: true,
